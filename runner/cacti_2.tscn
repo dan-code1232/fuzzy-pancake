@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c8aitp25visqa"]
+
+[ext_resource type="Texture2D" uid="uid://dh1q0w3xeacpp" path="res://New Piskel-2.png.png" id="1_mxxdb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6u7bd"]
+radius = 8.0
+height = 16.0
+
+[node name="Cacti 2" type="Node2D" unique_id=1836936064]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=459047066]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1535225163]
+texture_filter = 1
+texture = ExtResource("1_mxxdb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1042854823]
+position = Vector2(-1, 7)
+shape = SubResource("CapsuleShape2D_6u7bd")
