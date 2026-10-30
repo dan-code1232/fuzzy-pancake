@@ -1,0 +1,206 @@
+[gd_scene format=3 uid="uid://br88q74bccer7"]
+
+[ext_resource type="PackedScene" uid="uid://55do1l0r7r7s" path="res://player.tscn" id="1_1bjei"]
+[ext_resource type="PackedScene" uid="uid://cv6bt72q5jtbj" path="res://Cacti1.tscn" id="2_5g1s2"]
+[ext_resource type="PackedScene" uid="uid://c8aitp25visqa" path="res://cacti_2.tscn" id="3_aiv1b"]
+[ext_resource type="Script" uid="uid://dobfgo7736a3c" path="res://GameManager.gd" id="4_wapi5"]
+[ext_resource type="Texture2D" uid="uid://c27e71jc4d3kc" path="res://download.png" id="5_a2cb0"]
+[ext_resource type="Texture2D" uid="uid://bye81o12v5smy" path="res://download (2).png" id="6_3gjqj"]
+[ext_resource type="Texture2D" uid="uid://c0se3ax4xqgs7" path="res://download (1).png" id="7_g56ap"]
+[ext_resource type="Texture2D" uid="uid://b78wlysl31qpf" path="res://New Piskel-1.png.png" id="8_na6ls"]
+[ext_resource type="Script" uid="uid://bn3jit4pbnnr5" path="res://finish_line.gd" id="9_fjxbk"]
+[ext_resource type="Texture2D" uid="uid://cyvjsjcl5hdut" path="res://px1.png.png" id="10_3jhf0"]
+[ext_resource type="AudioStream" uid="uid://cd0p6dksi15dc" path="res://BeepBox-Song.wav" id="11_aiv1b"]
+[ext_resource type="Script" uid="uid://lbjtnqf2lq07" path="res://music_player.gd" id="12_wapi5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfxu0"]
+size = Vector2(1576, 1)
+
+[sub_resource type="Shortcut" id="Shortcut_kdubu"]
+
+[sub_resource type="FontVariation" id="FontVariation_rj586"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_51fql"]
+size = Vector2(32, 31)
+
+[node name="MAIN" type="Node2D" unique_id=1102181792]
+
+[node name="Player" parent="." unique_id=1871915501 instance=ExtResource("1_1bjei")]
+
+[node name="Node2D" parent="." unique_id=55720790 instance=ExtResource("2_5g1s2")]
+position = Vector2(270, 22)
+
+[node name="Node2D3" parent="." unique_id=1486144429 instance=ExtResource("2_5g1s2")]
+position = Vector2(427, 22)
+
+[node name="Node2D3" parent="Node2D3" unique_id=863240384 instance=ExtResource("2_5g1s2")]
+position = Vector2(116, -2)
+
+[node name="Node2D4" parent="Node2D3" unique_id=207087513 instance=ExtResource("2_5g1s2")]
+position = Vector2(104, -2)
+
+[node name="Node2D4" parent="." unique_id=1004559625 instance=ExtResource("2_5g1s2")]
+position = Vector2(-81, 21)
+
+[node name="Cacti 2" parent="." unique_id=1836936064 instance=ExtResource("3_aiv1b")]
+position = Vector2(557, 18)
+
+[node name="Cacti 3" parent="." unique_id=1986680621 instance=ExtResource("3_aiv1b")]
+position = Vector2(412, 18)
+
+[node name="Cacti 4" parent="." unique_id=1439695461 instance=ExtResource("3_aiv1b")]
+position = Vector2(156, 19)
+
+[node name="Node2D2" type="StaticBody2D" parent="." unique_id=1110349172]
+position = Vector2(123, 11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2" unique_id=150696737]
+position = Vector2(567, 25)
+shape = SubResource("RectangleShape2D_lfxu0")
+
+[node name="GameUI" type="CanvasLayer" parent="." unique_id=1287382222]
+
+[node name="GameOverScreen" type="Control" parent="GameUI" unique_id=7942950]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="GameUI/GameOverScreen" unique_id=1419983352]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.054790653, 0.20731726, 0.14303574, 1)
+
+[node name="Label" type="Label" parent="GameUI/GameOverScreen" unique_id=86361983]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 304.0
+offset_right = 724.0
+offset_bottom = 418.0
+text = "GAME OVER"
+
+[node name="Button" type="Button" parent="GameUI/GameOverScreen" unique_id=484936552]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 351.0
+offset_right = 674.0
+offset_bottom = 450.0
+action_mode = 0
+shortcut = SubResource("Shortcut_kdubu")
+text = "RESTART"
+
+[node name="TimerLabel" type="Label" parent="GameUI" unique_id=2000566962]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_rj586")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 2
+uppercase = true
+
+[node name="game_manager" type="Node" parent="." unique_id=252221989 groups=["game_manager"]]
+script = ExtResource("4_wapi5")
+
+[node name="ScoreTimer" type="Timer" parent="game_manager" unique_id=221554616]
+wait_time = 60.0
+one_shot = true
+
+[node name="Background" type="Node" parent="." unique_id=1107859911]
+
+[node name="Mountains" type="Parallax2D" parent="Background" unique_id=1922082397]
+scroll_scale = Vector2(0.5, 1)
+repeat_size = Vector2(480, 0)
+repeat_times = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Mountains" unique_id=799421341]
+z_index = -2
+texture_filter = 1
+position = Vector2(143, -84.00001)
+scale = Vector2(5, 5)
+texture = ExtResource("5_a2cb0")
+
+[node name="Clouds" type="Parallax2D" parent="Background" unique_id=2119038827]
+scroll_scale = Vector2(0.1, 1)
+repeat_size = Vector2(480, 0)
+repeat_times = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Clouds" unique_id=1952957005]
+z_index = -7
+z_as_relative = false
+texture_filter = 1
+position = Vector2(143, -84.00001)
+scale = Vector2(5, 5)
+texture = ExtResource("6_3gjqj")
+
+[node name="sky" type="Parallax2D" parent="Background" unique_id=161612299]
+scroll_scale = Vector2(0.1, 1)
+repeat_size = Vector2(480, 10)
+repeat_times = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/sky" unique_id=1621433864]
+z_index = -10
+z_as_relative = false
+texture_filter = 1
+position = Vector2(193.00002, -77)
+scale = Vector2(5, 5)
+texture = ExtResource("7_g56ap")
+
+[node name="Ground" type="Parallax2D" parent="Background" unique_id=411948510]
+scroll_scale = Vector2(0.5, 1)
+scroll_offset = Vector2(0, 2)
+repeat_size = Vector2(160, 0)
+repeat_times = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Ground" unique_id=528351581]
+z_index = 1
+texture_filter = 1
+position = Vector2(157.00002, -32.00001)
+scale = Vector2(5, 5)
+texture = ExtResource("8_na6ls")
+
+[node name="Label" type="Label" parent="Background" unique_id=515929029]
+z_index = -1
+texture_filter = 6
+texture_repeat = 1
+anchors_preset = -1
+anchor_top = -0.007
+anchor_bottom = -0.007
+offset_left = -70.0
+offset_top = -38.464
+offset_right = 164.0
+offset_bottom = 83.536
+text = "-> Go that way ->
+Dont touch the cacti
+Reach the finish in time!"
+
+[node name="FinishLine" type="Area2D" parent="." unique_id=740757659]
+position = Vector2(-198, 20)
+script = ExtResource("9_fjxbk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FinishLine" unique_id=1262189559]
+z_index = -4
+position = Vector2(870, 1)
+shape = SubResource("RectangleShape2D_51fql")
+
+[node name="Sprite2D" type="Sprite2D" parent="FinishLine" unique_id=1883095503]
+texture_filter = 1
+position = Vector2(868, -2)
+texture = ExtResource("10_3jhf0")
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="." unique_id=920043152]
+stream = ExtResource("11_aiv1b")
+script = ExtResource("12_wapi5")
+
+[connection signal="pressed" from="GameUI/GameOverScreen/Button" to="game_manager" method="_on_button_pressed"]
+[connection signal="timeout" from="game_manager/ScoreTimer" to="game_manager" method="_on_score_timer_timeout"]
+[connection signal="body_entered" from="FinishLine" to="game_manager" method="_on_body_entered"]

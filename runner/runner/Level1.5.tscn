@@ -1,0 +1,301 @@
+[gd_scene format=3 uid="uid://dydbqxd5stxxe"]
+
+[ext_resource type="PackedScene" uid="uid://375gsgqxfdtc" path="res://Platform.tscn" id="1_1l5kq"]
+[ext_resource type="PackedScene" uid="uid://55do1l0r7r7s" path="res://player.tscn" id="2_c45ly"]
+[ext_resource type="PackedScene" uid="uid://cv6bt72q5jtbj" path="res://Cacti1.tscn" id="3_pcwfm"]
+[ext_resource type="PackedScene" uid="uid://c8aitp25visqa" path="res://cacti_2.tscn" id="4_vo87b"]
+[ext_resource type="Script" uid="uid://dobfgo7736a3c" path="res://GameManager.gd" id="5_022u0"]
+[ext_resource type="Texture2D" uid="uid://c27e71jc4d3kc" path="res://download.png" id="6_rd434"]
+[ext_resource type="Texture2D" uid="uid://bye81o12v5smy" path="res://download (2).png" id="7_gv4e6"]
+[ext_resource type="Texture2D" uid="uid://c0se3ax4xqgs7" path="res://download (1).png" id="8_seumg"]
+[ext_resource type="Texture2D" uid="uid://b78wlysl31qpf" path="res://New Piskel-1.png.png" id="9_ybidv"]
+[ext_resource type="Script" uid="uid://bn3jit4pbnnr5" path="res://finish_line.gd" id="10_rupk3"]
+[ext_resource type="Texture2D" uid="uid://cyvjsjcl5hdut" path="res://px1.png.png" id="11_nhx50"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfxu0"]
+size = Vector2(1576, 1)
+
+[sub_resource type="Shortcut" id="Shortcut_kdubu"]
+
+[sub_resource type="FontVariation" id="FontVariation_rj586"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_51fql"]
+size = Vector2(32, 31)
+
+[node name="MAIN" type="Node2D" unique_id=1102181792]
+
+[node name="Node2D5" parent="." unique_id=617219268 instance=ExtResource("1_1l5kq")]
+position = Vector2(231, -4)
+
+[node name="Node2D5" parent="Node2D5" unique_id=263852838 instance=ExtResource("1_1l5kq")]
+position = Vector2(166, -14)
+
+[node name="Node2D6" parent="Node2D5" unique_id=46433519 instance=ExtResource("1_1l5kq")]
+position = Vector2(467, -17)
+
+[node name="Node2D5" parent="Node2D5/Node2D6" unique_id=661094584 instance=ExtResource("1_1l5kq")]
+position = Vector2(61, 22)
+
+[node name="Node2D7" parent="." unique_id=581631443 instance=ExtResource("1_1l5kq")]
+position = Vector2(429, -18)
+
+[node name="Node2D" parent="Node2D7" unique_id=1824330512 instance=ExtResource("1_1l5kq")]
+position = Vector2(85, 27)
+
+[node name="Node2D2" parent="Node2D7" unique_id=970881506 instance=ExtResource("1_1l5kq")]
+position = Vector2(40, 13)
+
+[node name="Node2D4" parent="Node2D7" unique_id=1009633552 instance=ExtResource("1_1l5kq")]
+position = Vector2(231, 13)
+
+[node name="Node2D3" parent="Node2D7" unique_id=2010554533 instance=ExtResource("1_1l5kq")]
+position = Vector2(192, 26)
+
+[node name="Node2D5" parent="Node2D7" unique_id=1806529194 instance=ExtResource("1_1l5kq")]
+position = Vector2(117, 27)
+
+[node name="Node2D6" parent="." unique_id=21627072 instance=ExtResource("1_1l5kq")]
+position = Vector2(124, 28)
+
+[node name="Node2D" parent="Node2D6" unique_id=131682460 instance=ExtResource("1_1l5kq")]
+position = Vector2(66, -14)
+
+[node name="Node2D2" parent="Node2D6" unique_id=899512727 instance=ExtResource("1_1l5kq")]
+position = Vector2(23, 0)
+
+[node name="Node2D4" parent="Node2D6" unique_id=362421563 instance=ExtResource("1_1l5kq")]
+position = Vector2(241, -46)
+
+[node name="Node2D3" parent="Node2D6" unique_id=1005697010 instance=ExtResource("1_1l5kq")]
+position = Vector2(209, -46)
+
+[node name="Node2D5" parent="Node2D6" unique_id=1940282543 instance=ExtResource("1_1l5kq")]
+position = Vector2(164, -33)
+
+[node name="Player" parent="." unique_id=1871915501 instance=ExtResource("2_c45ly")]
+
+[node name="Node2D" parent="." unique_id=55720790 instance=ExtResource("3_pcwfm")]
+position = Vector2(56, 20)
+
+[node name="Node2D" parent="Node2D" unique_id=1296065678 instance=ExtResource("3_pcwfm")]
+position = Vector2(310, -52)
+
+[node name="Node2D2" parent="Node2D" unique_id=1557287549 instance=ExtResource("3_pcwfm")]
+position = Vector2(446, -25)
+
+[node name="Node2D3" parent="Node2D" unique_id=553905920 instance=ExtResource("3_pcwfm")]
+position = Vector2(616, -39)
+
+[node name="Node2D9" parent="." unique_id=1283546037 instance=ExtResource("3_pcwfm")]
+position = Vector2(591, 20)
+
+[node name="Node2D9" parent="Node2D9" unique_id=1710422239 instance=ExtResource("3_pcwfm")]
+position = Vector2(214, 1)
+
+[node name="Node2D10" parent="Node2D9" unique_id=1472427294 instance=ExtResource("3_pcwfm")]
+position = Vector2(231, 1)
+
+[node name="Node2D11" parent="Node2D9" unique_id=2129659853 instance=ExtResource("3_pcwfm")]
+position = Vector2(445, 1)
+
+[node name="Node2D9" parent="Node2D9/Node2D11" unique_id=1818356294 instance=ExtResource("3_pcwfm")]
+position = Vector2(213, -1)
+
+[node name="Node2D10" parent="Node2D9/Node2D11" unique_id=222734695 instance=ExtResource("3_pcwfm")]
+position = Vector2(296, -1)
+
+[node name="Node2D12" parent="Node2D9" unique_id=1344679485 instance=ExtResource("3_pcwfm")]
+position = Vector2(374, 1)
+
+[node name="Node2D9" parent="Node2D9/Node2D12" unique_id=708989958 instance=ExtResource("3_pcwfm")]
+position = Vector2(133, 1)
+
+[node name="Node2D10" parent="Node2D9/Node2D12" unique_id=1514687594 instance=ExtResource("3_pcwfm")]
+position = Vector2(270, -1)
+
+[node name="Node2D13" parent="Node2D9" unique_id=791531153 instance=ExtResource("3_pcwfm")]
+position = Vector2(137, -33)
+
+[node name="Node2D9" parent="Node2D9/Node2D13" unique_id=1855290548 instance=ExtResource("3_pcwfm")]
+position = Vector2(60, 32)
+
+[node name="Node2D10" parent="Node2D9/Node2D13" unique_id=1459869417 instance=ExtResource("3_pcwfm")]
+position = Vector2(156, -44)
+
+[node name="Node2D3" parent="." unique_id=1486144429 instance=ExtResource("3_pcwfm")]
+position = Vector2(259, 20)
+
+[node name="Node2D4" parent="." unique_id=1004559625 instance=ExtResource("3_pcwfm")]
+position = Vector2(-76, 20)
+
+[node name="Cacti 2" parent="." unique_id=1836936064 instance=ExtResource("4_vo87b")]
+position = Vector2(280, 18)
+
+[node name="Cacti 3" parent="." unique_id=1986680621 instance=ExtResource("4_vo87b")]
+position = Vector2(575, 18)
+
+[node name="Node2D8" parent="." unique_id=1290993034 instance=ExtResource("1_1l5kq")]
+position = Vector2(727, 1)
+
+[node name="Node2D" parent="Node2D8" unique_id=1519525726 instance=ExtResource("1_1l5kq")]
+position = Vector2(121, 0)
+
+[node name="Node2D2" parent="Node2D8" unique_id=1612949979 instance=ExtResource("1_1l5kq")]
+position = Vector2(34, -51)
+
+[node name="Node2D4" parent="Node2D8" unique_id=6754988 instance=ExtResource("1_1l5kq")]
+position = Vector2(80, -62)
+
+[node name="Node2D3" parent="Node2D8" unique_id=624392201 instance=ExtResource("1_1l5kq")]
+position = Vector2(163, 17)
+
+[node name="Node2D5" parent="Node2D8" unique_id=1836465930 instance=ExtResource("1_1l5kq")]
+position = Vector2(165, -43)
+
+[node name="Cacti 4" parent="." unique_id=1439695461 instance=ExtResource("4_vo87b")]
+position = Vector2(241, 18)
+
+[node name="Cacti 4" parent="Cacti 4" unique_id=333347813 instance=ExtResource("4_vo87b")]
+position = Vector2(534, -84)
+
+[node name="Cacti 5" parent="Cacti 4" unique_id=1754100593 instance=ExtResource("4_vo87b")]
+position = Vector2(662, -76)
+
+[node name="Cacti 4" parent="Cacti 4/Cacti 5" unique_id=315849672 instance=ExtResource("4_vo87b")]
+position = Vector2(212, 75)
+
+[node name="Node2D2" type="StaticBody2D" parent="." unique_id=1110349172]
+position = Vector2(123, 11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2" unique_id=150696737]
+position = Vector2(573, 22)
+shape = SubResource("RectangleShape2D_lfxu0")
+
+[node name="GameUI" type="CanvasLayer" parent="." unique_id=1287382222]
+
+[node name="GameOverScreen" type="Control" parent="GameUI" unique_id=7942950]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="GameUI/GameOverScreen" unique_id=1419983352]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.054790653, 0.20731726, 0.14303574, 1)
+
+[node name="Label" type="Label" parent="GameUI/GameOverScreen" unique_id=86361983]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 304.0
+offset_right = 724.0
+offset_bottom = 418.0
+text = "GAME OVER"
+
+[node name="Button" type="Button" parent="GameUI/GameOverScreen" unique_id=484936552]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 351.0
+offset_right = 674.0
+offset_bottom = 450.0
+action_mode = 0
+shortcut = SubResource("Shortcut_kdubu")
+text = "RESTART"
+
+[node name="TimerLabel" type="Label" parent="GameUI" unique_id=2000566962]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_rj586")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 2
+uppercase = true
+
+[node name="game_manager" type="Node" parent="." unique_id=252221989 groups=["game_manager"]]
+script = ExtResource("5_022u0")
+
+[node name="ScoreTimer" type="Timer" parent="game_manager" unique_id=221554616]
+wait_time = 60.0
+one_shot = true
+
+[node name="Background" type="Node" parent="." unique_id=1107859911]
+
+[node name="Mountains" type="Parallax2D" parent="Background" unique_id=1922082397]
+visible = false
+scroll_scale = Vector2(0.5, 1)
+repeat_size = Vector2(480, 0)
+repeat_times = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Mountains" unique_id=799421341]
+z_index = -1
+texture_filter = 1
+position = Vector2(143, -84.00001)
+scale = Vector2(5, 5)
+texture = ExtResource("6_rd434")
+
+[node name="Clouds" type="Parallax2D" parent="Background" unique_id=2119038827]
+visible = false
+scroll_scale = Vector2(0.1, 1)
+repeat_size = Vector2(480, 0)
+repeat_times = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Clouds" unique_id=1952957005]
+z_index = -7
+z_as_relative = false
+texture_filter = 1
+position = Vector2(143, -84.00001)
+scale = Vector2(5, 5)
+texture = ExtResource("7_gv4e6")
+
+[node name="sky" type="Parallax2D" parent="Background" unique_id=161612299]
+visible = false
+scroll_scale = Vector2(0.1, 1)
+repeat_size = Vector2(480, 10)
+repeat_times = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/sky" unique_id=1621433864]
+z_index = -10
+z_as_relative = false
+texture_filter = 1
+position = Vector2(145.00002, -85.00001)
+scale = Vector2(5, 5)
+texture = ExtResource("8_seumg")
+
+[node name="Ground" type="Parallax2D" parent="Background" unique_id=411948510]
+scroll_scale = Vector2(0.5, 1)
+repeat_size = Vector2(160, 0)
+repeat_times = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Ground" unique_id=528351581]
+z_index = 1
+texture_filter = 1
+position = Vector2(157.00002, -32.00001)
+scale = Vector2(5, 5)
+texture = ExtResource("9_ybidv")
+
+[node name="FinishLine" type="Area2D" parent="." unique_id=740757659]
+script = ExtResource("10_rupk3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FinishLine" unique_id=1262189559]
+z_index = -4
+position = Vector2(1496, 17)
+shape = SubResource("RectangleShape2D_51fql")
+
+[node name="Sprite2D" type="Sprite2D" parent="FinishLine" unique_id=1883095503]
+texture_filter = 1
+position = Vector2(1496, 16)
+texture = ExtResource("11_nhx50")
+
+[connection signal="pressed" from="GameUI/GameOverScreen/Button" to="game_manager" method="_on_button_pressed"]
+[connection signal="timeout" from="game_manager/ScoreTimer" to="game_manager" method="_on_score_timer_timeout"]
+[connection signal="body_entered" from="FinishLine" to="game_manager" method="_on_body_entered"]

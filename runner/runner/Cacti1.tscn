@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cv6bt72q5jtbj"]
+
+[ext_resource type="Texture2D" uid="uid://dkwtrpjar6ktk" path="res://New Piskel-1.png (6).png" id="1_6ujcp"]
+[ext_resource type="Script" uid="uid://cfuhjv7yof0bg" path="res://hazard.gd" id="2_w3ybq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w3ybq"]
+radius = 5.5
+height = 25.0
+
+[node name="Node2D" type="Node2D" unique_id=55720790]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1520276374]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1533488657]
+texture_filter = 1
+position = Vector2(1.0000005, -3.5000005)
+scale = Vector2(1.25, 1.21875)
+texture = ExtResource("1_6ujcp")
+
+[node name="Hazard" type="Area2D" parent="StaticBody2D" unique_id=2002756811]
+script = ExtResource("2_w3ybq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Hazard" unique_id=1961015707]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_w3ybq")
+
+[connection signal="body_entered" from="StaticBody2D/Hazard" to="StaticBody2D/Hazard" method="_on_body_entered"]
