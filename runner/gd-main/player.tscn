@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://ckudr8chj1kgo"]
+
+[ext_resource type="Script" uid="uid://bss4mgihbqfdc" path="res://character_body_2d.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://dfa4igojkhk0c" path="res://New Piskel-1.png.png" id="2_onrkg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4flbx"]
+radius = 5.0
+height = 20.0
+
+[node name="Player" type="Node2D" unique_id=804044680]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=934443223]
+script = ExtResource("1_4flbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=377725970]
+texture_filter = 1
+texture_repeat = 1
+scale = Vector2(3.273, 3)
+texture = ExtResource("2_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=487983041]
+position = Vector2(-18, -15)
+scale = Vector2(3, 3)
+shape = SubResource("CapsuleShape2D_4flbx")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1458080196]
+position = Vector2(-5, -8)
+position_smoothing_speed = 4.0

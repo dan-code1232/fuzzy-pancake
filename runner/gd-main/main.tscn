@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Texture2D" uid="uid://t6hxhefyyr5f" path="res://New Piskel-1.png (1).png" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://cj7thtscr03rr" path="res://New Piskel-1.png (2).png" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://d0q1c2rjl4euc" path="res://New Piskel-1.png (3).png" id="3_1bvp3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfxu0"]
+size = Vector2(309, 93)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(382, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
+size = Vector2(50, 376)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
+size = Vector2(59.000004, 376)
+
+[node name="Node2D" type="Node2D" unique_id=1028492489]
+
+[node name="Counter" type="StaticBody2D" parent="." unique_id=1462206519]
+position = Vector2(-498, 23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Counter" unique_id=1685121619]
+texture_filter = 1
+position = Vector2(481, 23.5)
+shape = SubResource("RectangleShape2D_lfxu0")
+debug_color = Color(0.81294, 0.31887978, 0.66078883, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="Counter" unique_id=1354552762]
+texture_filter = 1
+position = Vector2(493, -13)
+scale = Vector2(12, 12)
+texture = ExtResource("1_0xm2m")
+
+[node name="Counter2" type="StaticBody2D" parent="." unique_id=1273805353]
+position = Vector2(-498, 23)
+
+[node name="CollisionS1hape2D" type="CollisionShape2D" parent="Counter2" unique_id=199670424]
+texture_filter = 1
+position = Vector2(-52, -2.5)
+shape = SubResource("RectangleShape2D_1bvp3")
+debug_color = Color(0.81294, 0.31887978, 0.66078883, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="Counter2" unique_id=1654920955]
+texture_filter = 1
+position = Vector2(-53, 34)
+scale = Vector2(12, 12)
+texture = ExtResource("2_h2yge")
+
+[node name="Counter3" type="StaticBody2D" parent="." unique_id=889597785]
+position = Vector2(-498, 23)
+
+[node name="CollisionS1hape2D" type="CollisionShape2D" parent="Counter3" unique_id=253232644]
+texture_filter = 1
+position = Vector2(107, 207)
+shape = SubResource("RectangleShape2D_lquwl")
+debug_color = Color(0.81294, 0.31887978, 0.66078883, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="Counter3" unique_id=1619357747]
+texture_filter = 1
+position = Vector2(127, 212)
+scale = Vector2(12, 12)
+texture = ExtResource("3_1bvp3")
+
+[node name="Counter5" type="StaticBody2D" parent="." unique_id=571804162]
+position = Vector2(457, -162)
+rotation = 1.5707964
+
+[node name="CollisionS1hape2D" type="CollisionShape2D" parent="Counter5" unique_id=1807939967]
+texture_filter = 1
+position = Vector2(201.5, -91)
+shape = SubResource("RectangleShape2D_7mycd")
+debug_color = Color(0.81294, 0.31887978, 0.66078883, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="Counter5" unique_id=215366178]
+texture_filter = 1
+position = Vector2(219, -94.99999)
+scale = Vector2(12, 12)
+texture = ExtResource("3_1bvp3")
+
+[node name="Player" parent="." unique_id=804044680 instance=ExtResource("1_ig7tw")]
+position = Vector2(-565, -132)
+
+[node name="Counter4" type="StaticBody2D" parent="." unique_id=2073818141]
+position = Vector2(-498, 402)
+
+[node name="CollisionS1hape2D" type="CollisionShape2D" parent="Counter4" unique_id=497358838]
+texture_filter = 1
+position = Vector2(107, 207)
+shape = SubResource("RectangleShape2D_lquwl")
+debug_color = Color(0.81294, 0.31887978, 0.66078883, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="Counter4" unique_id=242873573]
+texture_filter = 1
+position = Vector2(127, 212)
+scale = Vector2(12, 12)
+texture = ExtResource("3_1bvp3")
